@@ -28,32 +28,40 @@ html, body {
     border: 2px solid;
 }
   .body { 
-    margin: 20px;
+    margin: 10px;
     border: 2px solid;
     grid-area: body;
     background: #FFFFFF;
     border-radius:15px;
 }
-
-.containerBody{
-    width: 100%;
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
-    gap:8px;
-
-  }
-  .container_flex {
-    display: flex;
-    align-items: center;
-    gap: 20px; 
-    background-color: #b96bfb;
-    border-radius: 12px;
-    margin: 20px; 
-    padding: 15px; 
-    border-radius: 10px; 
+.containerBody {
+  display: grid;
+  grid-template-columns: 65% 35%; /* Izquierda 65%, Derecha 35% */
+  gap: 8px;
 }
-
+.container_flex {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+  background: rgb(151,58,217);
+  background: linear-gradient(0deg, rgba(151,58,217,1) 2%, rgba(216,45,253,1) 80%);
+  border-radius: 12px;
+  margin: 20px; 
+  padding: 15px; 
+  border-radius: 10px; 
+}
+.fontDescription{
+  font-size: 10px;
+}
+.btnExplore{
+background: #FFFFFF;
+margin-top: 15px;
+border-radius: 15px;
+height: 35px;
+font-size:small;
+box-shadow: none;
+color: #3a3838dc;
+}
 .text_container {
     flex: 1;
 }
@@ -63,8 +71,12 @@ html, body {
 }
 
 .img {
-    height: 200px;
-    border-radius: 10px; 
+    height: 230px;
+    mask-image: linear-gradient(
+      black 80%,
+      transparent
+    );
+    margin-left: -20px;
 }
 .icon{
   height: 30px;
@@ -168,3 +180,4 @@ h1{
   flex-direction: column;
   align-items: center;
 }
+
